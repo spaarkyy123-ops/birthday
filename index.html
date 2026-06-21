@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" href="src/globals.css">
+<link rel="stylesheet" href="src/style.css">
+
+</head>
+
+<body>
+
+  <video class="fullscreen-bg-video" autoplay loop unmuted playsinline>
+    <source src="public/images/bgv.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    const birthdayVideo = document.querySelector('.fullscreen-bg-video');
+
+    const options = {
+      root: null,
+      threshold: 0.15 // Triggers when 15% of the video container is visible on screen
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // User scrolled DOWN to the letter -> Play video
+          birthdayVideo.play().catch(err => console.log("Video playback error:", err));
+        } else {
+          // User scrolled UP away from the letter -> Pause video
+          birthdayVideo.pause();
+        }
+      });
+    }, options);
+
+    // Start watching the background video
+    if (birthdayVideo) {
+      observer.observe(birthdayVideo);
+    }
+  </script>
+</body>
+
+
+
+  
+
+  <div class="wrapper">   
+    
+    <div class="desktop" data-model-id="4:7">
+      
+      <img class="flower2" src="https://c.animaapp.com/9ZhotmBh/img/249457266853806374-1.png" />
+      
+      <img class="download" src="public/images/download.jpg" />
+      
+      <img class="flower1" src="https://c.animaapp.com/9ZhotmBh/img/8022105582676317-1.png" />
+      
+      <img class="a" src="public/images/1.png" />
+
+    <div class="sachu">sachuuu</div>
+      <div class="birthday"><br/>Birthday</div>
+      <div class="happy">Happy</div>
+
+      <div class="carousel">
+        <div class="group">
+          <div class="card"><img src="public/images/2.jpg"/></div>
+          <div class="card"><img src="public/images/13.jpeg"/></div>
+          <div class="card"><img src="public/images/4.jpg"/></div>
+          <div class="card"><img src="public/images/5.jpg"/></div>
+          <div class="card"><img src="public/images/8.jpg"/></div>
+          <div class="card"><img src="public/images/10.jpeg"/></div>
+        </div>
+        <div class="group">
+          <div class="card"><img src="public/images/2.jpg"/></div>
+          <div class="card"><img src="public/images/13.jpeg"/></div>
+          <div class="card"><img src="public/images/4.jpg"/></div>
+          <div class="card"><img src="public/images/5.jpg"/></div>
+          <div class="card"><img src="public/images/8.jpg"/></div>
+          <div class="card"><img src="public/images/10.jpeg"/></div>
+        </div>
+      </div>
+
+      <div class="carousel1" reverse="true">
+        <div class="group1">
+          <div class="card1"><img src="public/images/3.jpg"/></div>
+          <div class="card1"><img src="public/images/7.jpeg"/></div>
+          <div class="card1"><img src="public/images/11.jpeg"/></div>
+          <div class="card1"><img src="public/images/15.jpg"/></div>
+          <div class="card1"><img src="public/images/16.jpg"/></div>
+          <div class="card1"><img src="public/images/19.jpeg"/></div>
+        </div>
+        <div class="group1">
+          <div class="card1"><img src="public/images/3.jpg"/></div>
+          <div class="card1"><img src="public/images/7.jpeg"/></div>
+          <div class="card1"><img src="public/images/11.jpeg"/></div>
+          <div class="card1"><img src="public/images/15.jpg"/></div>
+          <div class="card1"><img src="public/images/16.jpg"/></div>
+          <div class="card1"><img src="public/images/19.jpeg"/></div>
+        </div>
+      </div>
+
+      <div class="carousel2" reverse="true">
+        <div class="group2">
+          <div class="card2"><img src="public/images/24.jpeg"/></div>
+          <div class="card2"><img src="public/images/20.jpeg"/></div>
+          <div class="card2"><img src="public/images/23.jpeg"/></div>
+          <div class="card2"><img src="public/images/12.jpeg"/></div>
+          <div class="card2"><img src="public/images/22.jpeg"/></div>
+          <div class="card2"><img src="public/images/21.jpeg"/></div>
+        </div>
+        <div class="group2">
+          <div class="card2"><img src="public/images/24.jpeg"/></div>
+          <div class="card2"><img src="public/images/20.jpeg"/></div>
+          <div class="card2"><img src="public/images/23.jpeg"/></div>
+          <div class="card2"><img src="public/images/12.jpeg"/></div>
+          <div class="card2"><img src="public/images/22.jpeg"/></div>
+          <div class="card2"><img src="public/images/21.jpeg"/></div>
+        </div>
+      </div>
+
+      <div class="msg"> 
+        <h1>Happy birthday my love💕....</h1>
+        <p>First of all oru sorry paranj thane thondangam.....</p>
+        <p>as njan nine wish cheyyana first birthday i think ithinn munne njan ninakk oru msg polu birthdaykk ayachittila...anyways happy birthday sachuuu let this year be a wonderful year for you..</p>
+        <p>pinne eppozhum happy aayit iriikka and i will be there for you forever </p>
+        <p>happy birthday once again,love you so sooo much...umma...</p>
+        <p class="letter-signature">With love💞,<br>Achu</p>
+      </div>
+      
+    </div>
+    
+  </div>   
+
+</body>
+</html>
